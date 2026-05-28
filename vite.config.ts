@@ -1,9 +1,14 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
+import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// Se o @tanstack/start/config der erro ao instanciar, o Vinxi lê nativamente assim:
 export default defineConfig({
   plugins: [
-    tsconfigPaths(),
+    tanstackRouter(), // Gera as rotas localmente no seu PC
+    react(),
+    tailwindcss(),    // Compila o Tailwind v4
+    tsconfigPaths(),  // Resolve os caminhos com "@/"
   ],
 });
