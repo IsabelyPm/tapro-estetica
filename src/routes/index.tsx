@@ -310,7 +310,7 @@ function LeadModal({ isOpen, onClose, preSelectedSlot, isBonusActive }: LeadModa
   );
 }
 
-function Index() {
+export function Index() {
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
   const [isLeadOpen, setIsLeadOpen] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState<{ date: string; time: string } | null>(null);
