@@ -1,15 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider } from '@tanstack/react-router'
-import { getRouter } from './router' // Importa a função do router.tsx
 import './styles.css'
 
-// Executa a função para gerar a instância do roteador no navegador
-const router = getRouter()
-
-// Renderiza o aplicativo na tela
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div style={{ padding: '50px', textBreak: 'break-word', textAlign: 'center' }}>
+      <h1 style={{ color: '#000', fontSize: '32px' }}>O React está funcionando!</h1>
+      <p style={{ color: '#666' }}>Se você está lendo isso, o index.html e o Vite estão configurados certos.</p>
+    </div>
   </React.StrictMode>,
 )
